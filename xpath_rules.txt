@@ -1,0 +1,18 @@
+install the xml tool from extenstions 
+
+press ctrl+shift+p | f1 in vs code and type xpath, select the option evaluate xpath 
+taking data.xml file as a sample xml 
+
+/data
+/data/name
+/data/name/text()
+
+/data/name[1]
+/data/name[last()]
+/data/name[contains(text(),"Record")]
+
+//name[@id]
+//name[@id="value"]
+/data/name/
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!-- to define the dtd, DOCTYPE is necessary -->
+<!-- DOCTYPE is declartion for DTD -->
+
+
+<!DOCTYPE university  [
+    
+    <!-- to define the element -->
+    <!-- name, school and email are child tags inside in it -->
+    <!-- + means there must be one or more tag, ? means there must be one tag, and there is * option which means zero or more -->
+    <!ELEMENT university (name,school+,email?)>
+    <!-- pcdata means any string type data -->
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT school (#PCDATA)>
+    <!-- to define the attribute inside a element -->
+    <!-- required means it is necessary, this option has also some other properties like implied which means option, 
+    fixed which means these attributes values are not gonna change any more, and much more -->
+    <!ATTLIST school type (software | computer-science | electrical | mechnaical) #REQUIRED>
+    <!ELEMENT email (#PCDATA)>
+]> 
+<!-- above syntax is for closing the DTD -->
+
+<university>
+    <name> 
+        Chongqing University 
+    </name>
+    <school type="software"> 
+        School of Software engineering
+    </school>
+    
+    <school type="computer-science"> 
+        School of computer science
+    </school>
+    <school type="electrical"> 
+        School of electrical engineering
+    </school>
+    
+    <school type="mechnaical"> 
+        School of mechnaical engineering
+    </school>
+    
+    <email>
+        abc@gmail.com
+    </email>
+</university>

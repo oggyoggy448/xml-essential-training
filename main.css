@@ -1,0 +1,38 @@
+data{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+name{
+    background-color: green;
+    color: white;
+    height: 100px;
+    text-transform: uppercase;
+    font-size: 2em;
+    width: 100%;
+    display: block;
+    margin: auto;
+    text-align: center;
+    padding-top: 5%;
+
+}
+
+#u_name::before{
+    content: "(" attr(name) ")"; /*attr method retuns the value of perticular attribute*/
+}
+
+age{
+    display: block;
+    background-color:grey;
+    color: white;
+    width: 100%;
+    height: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    font-style: italic;
+    text-align: center;
+    padding-top: 2%;
+}
+
+age::after{
+    content: "well this is a age of someone student";
+}

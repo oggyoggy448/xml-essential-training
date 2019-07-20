@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <section>
+            <b>Option</b>
+            <b>Menu</b>
+            <b> bill</b>
+        </section>
+        <section id="food_sect">
+            <input type="checkbox" name="" id="food_menu">
+            <label for="food_menu">Food Menu</label>
+            <span> $ 12.3</span>
+        </section>
+        <section id="veg_sect">
+            <input type="checkbox" name="" id="vegetables_menu">
+            <label for="vegetables_menu">Vegetable menu</label>
+            <span> $ 19.5</span>
+        </section>
+
+        <section id="chicken_sect">    
+            <input type="checkbox" name="" id="chicken_menu">
+            <label for="chicken_menu">chicken menu </label>
+            <span>$ 41.32</span>
+        </section>
+        <hr>
+        <button type="button" > Bill</button>
+    </form>
+
+    <xml id="xml" style="display: none">
+        <food_price>12.3</food_price>
+        <veg_price>19.5</veg_price>
+        <chic_price>41.32</chic_price>
+    </xml>
+    <script>
+        var t_price = 0;
+        var xml_data = document.getElementsByTagName("xml")[0];
+        // document.getElementById("food_sect").removeChild(document.getElementById("food_menu"));
+
+        // document.getElementById("food_menu").remove();
+        // alert(document.getElementById("food_menu").getAttribute("id"));
+
+        var food = document.getElementById("food_menu");
+        food.addEventListener("change",function(){
+
+        if(food.checked){
+            
+            t_price+=eval(xml_data.getElementsByTagName("food_price")[0].firstChild.data);
+        }
+        else{
+            t_price-=eval(xml_data.getElementsByTagName("food_price")[0].firstChild.data);
+        }
+        });
+        
+        document.getElementById("vegetables_menu").addEventListener("change",function(){
+            if(this.checked){
+                t_price+=eval(xml_data.getElementsByTagName("veg_price")[0].firstChild.data);
+            }
+            else{
+                t_price-=eval(xml_data.getElementsByTagName("veg_price")[0].firstChild.data);
+            }
+        });
+
+        
+        document.getElementById("chicken_menu").addEventListener("change",function(){
+            if(this.checked){
+                t_price+=eval(xml_data.getElementsByTagName("chic_price")[0].firstChild.data);
+            }
+            else{
+                t_price-=eval(xml_data.getElementsByTagName("chic_price")[0].firstChild.data);
+            }
+        });
+
+        document.getElementsByTagName("button")[0].addEventListener("click",function(){
+            
+            alert("total bill is: $"+ Math.round(t_price));
+            
+
+        });
+
+        
+
+
+        
+    </script>
+</body>
+</html>

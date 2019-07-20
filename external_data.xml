@@ -1,0 +1,2 @@
+<!-- //to define dtd file externally, use the following files -->
+<!DOCTYPE root_elem SYSTEM "EXTERNAL.dtd" >  

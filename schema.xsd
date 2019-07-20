@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/new_schema" xmlns:tns="http://www.example.org/new_schema" elementFormDefault="qualified">
+	<xsd:element name="item" type="xsd:string">
+		<xsd:attribute minoccurs="0" type="xsd:string"/>
+	</xsd:element>
+</schema>

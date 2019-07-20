@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/css" href="main.css" ?>
+
+<data>
+    <name id="u_name" name="name">
+        Student Record
+    </name>
+    <name id="u_name" name="name">
+        Student Record1
+    </name>
+    <age>   
+        24
+    </age>
+    <a href="https://www.google.com/"> click </a>
+</data>

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet type="text/xsl" href="repeating_style.xslt"?>
+<items>
+    <item>
+        <heading id="dept"> Department </heading>
+        <p> Software Engineering </p>
+    </item>
+
+    <item>
+        <p> Software Engineering </p>
+        <heading id="dept2"> degree2 </heading>
+        <heading id="dept1"> degree </heading>
+    </item>
+</items>
+
+
+
+

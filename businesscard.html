@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button>
+        show me information
+    </button>
+    
+    <xml id="s_xml">
+        <businesscard>
+            <name>
+                Nouman Ahmad
+            </name>
+            <email>
+                sign448free@gmail.com
+            </email>
+            <address>
+                Sample address
+            </address>
+        </businesscard>
+    </xml>
+    <script>
+        window.addEventListener("load",function(){
+            var show_card_btn = document.querySelector("button");
+            show_card_btn.addEventListener("click",show_card)
+        });
+
+        function show_card(){
+            var xml = document.getElementById("s_xml");
+            var card = xml.getElementsByTagName("businesscard");
+
+            // var name = card.getElementsByTagName("name")[0].firstChild.data;
+            // var email = card.getElementsByTagName("email")[0].innerHTML;
+
+            // alert("name: "+ name + "\n email: "+email);
+            
+            // console.log(card.length);
+            for (i=0;i<card.length;i++){
+                // console.log(card[i]);
+                var current_card = card[i];
+                var new_card = document.createElement("div");
+
+                var n_name = document.createElement("div");
+                n_name.setAttribute("class","name");
+                
+                var n_email = document.createElement("div");
+                n_email.setAttribute("class","email");
+
+                
+                var n_address = document.createElement("div");
+                n_address.setAttribute("class","name");
+
+                name_value = document.createTextNode(current_card.getElementsByTagName("name")[0].firstChild.data);
+                email_value = document.createTextNode(current_card.getElementsByTagName("email")[0].firstChild.data);
+                address_value = document.createTextNode(current_card.getElementsByTagName("address")[0].firstChild.data);
+
+                n_name.appendChild(name_value);
+                n_email.appendChild(email_value);
+                n_address.appendChild(address_value);
+
+                new_card.appendChild(n_name);
+                new_card.appendChild(n_email);
+                new_card.appendChild(n_address);
+
+                current_card.appendChild(new_card);
+
+                document.querySelector("body").appendChild(current_card);
+            }
+        }
+    </script>
+</body>
+</html>
